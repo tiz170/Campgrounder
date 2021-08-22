@@ -14,7 +14,7 @@
 
     <div class="row">
         <h1 class="text-center">Edit Campground</h1>
-        <div class="col-6 offset-3">
+        <div class="col-md-6 offset-md-3">
             <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" novalidate class="validated-form"
                 enctype="multipart/form-data">
                 <div class="mb-3">
@@ -61,20 +61,18 @@
                     <input class="form-control" type="file" id="image" name="image" multiple>
                 </div>
 
-
                 <div class="mb-3">
-                    <% console.log(campground) %>
-                        <% campground.images.forEach(function(img, i){ %>
-                            <img src="<%=img.thumbnail%>" class="img-thumbnail" alt="">
-                            <div class="form-check-inline">
-                                <input type="checkbox" id="image-<%=i%>" name="deleteImages[]"
-                                    value="<%=img.filename%>">
-                            </div>
-                            <label for="image-<%=i%>">Delete?</label>
-                            <!-- <% console.log(img) %> -->
+                    <% campground.images.forEach(function(img, i) {  %>
+                        <% console.log(img) %>
 
-                            <% }) %>
+                    <img src="<%=img.thumbnail%>" class="img-thumbnail" alt="">
+                    <div class="form-check-inline">
+                        <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                    </div>
+                    <label for="image-<%=i%>">Delete?</label>
+                    <% })%>
                 </div>
+
 
                 <div class="mb-3">
                     <button class="btn btn-info">Update Campground</button>
