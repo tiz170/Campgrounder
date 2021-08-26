@@ -28,8 +28,8 @@ const reviewRoutes = require('./routes/reviews');
 const MongoStore = require('connect-mongo')(session);
 
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
-
-mongoose.connect(dbUrl, {
+// if change below url to dbUrl, there will be no campgrounds on the website
+mongoose.connect('mongodb://localhost:27017/yelp-camp', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
