@@ -1,4 +1,4 @@
-# YelpCamp
+# Campgrounder
 Monolithic model-view-controller full-stack web application built with Node.js, Express.js, MonogDB, EJS, and Bootstrap.
 Server hosted on Heroku, Database hosted on MongoDB Atlas, served over Microsoft Azure with Google Domains as DNS provider.
 
@@ -69,7 +69,7 @@ To see the app in action, go to:
 ### Clone or download this repository
 
 ```sh
-git clone https://github.com/tiz170/YelpCamp.git
+git clone https://github.com/tiz170/Campgrounder.git
 ```
 
 ### Install dependencies
